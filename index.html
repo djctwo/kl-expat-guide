@@ -249,8 +249,8 @@
         .event-card.hidden { display: none; }
         .event-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
         .event-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; color: var(--text-charcoal); line-height: 1.3; }
-        .event-link { font-size: 12px; color: var(--accent-burgundy, #7a2e3a); text-decoration: none; opacity: 0.6; transition: opacity 0.2s; margin-left: 8px; }
-        .event-link:hover { opacity: 1; text-decoration: underline; }
+        .event-link { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 600; color: var(--accent-burgundy, #7a2e3a); text-decoration: none; background: rgba(122, 46, 58, 0.08); border: 1px solid rgba(122, 46, 58, 0.15); padding: 5px 12px; border-radius: 20px; margin-top: 12px; transition: all 0.2s; letter-spacing: 0.3px; }
+        .event-link:hover { background: rgba(122, 46, 58, 0.15); border-color: rgba(122, 46, 58, 0.3); color: var(--accent-burgundy); }
         .country-badge { padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; flex-shrink: 0; margin-left: 12px; }
         .country-de { background: #f0e4c4; color: #6b5318; }
         .country-fr { background: #d6dff0; color: #2e4a7a; }
@@ -605,99 +605,111 @@
         <div class="events-grid">
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="49.4077" data-lng="8.6908" data-month="mar-apr" data-country="DE" data-dates="2026-03-14">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Heidelberger Fr&uuml;hling</div><a class="event-link" href="https://www.heidelberger-fruehling.de/en" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Heidelberger Fr&uuml;hling</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Mar 14 &ndash; Apr 19</div>
                 <div class="event-location">Heidelberg</div>
                 <div class="event-desc">Classical music festival in the renovated Stadthalle. World-class orchestras, chamber music, lieder across 5 weeks.</div>
                 <div class="event-distance">~1h from KL</div>
+                <a class="event-link" href="https://www.heidelberger-fruehling.de/en" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-burgundy)" data-lat="48.8566" data-lng="2.3522" data-month="mar-apr" data-country="FR" data-dates="2026-03-19">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Salon des Vignerons Ind&eacute;pendants</div><a class="event-link" href="https://www.vigneron-independant.com" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+                <div class="event-header"><div class="event-name">Salon des Vignerons Ind&eacute;pendants</div><span class="country-badge country-fr">FR</span></div>
                 <div class="event-dates">Mar 19&ndash;22</div>
                 <div class="event-location">Paris</div>
                 <div class="event-desc">France's independent winemakers gather for tastings from every region. Buy direct from producers at cellar prices.</div>
                 <div class="event-distance">~4h &#x1F684; from KL</div>
+                <a class="event-link" href="https://www.vigneron-independant.com" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-terracotta)" data-lat="52.2697" data-lng="4.5462" data-month="mar-apr" data-country="NL" data-dates="2026-03-19">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Keukenhof</div><a class="event-link" href="https://keukenhof.nl/en/" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+                <div class="event-header"><div class="event-name">Keukenhof</div><span class="country-badge country-nl">NL</span></div>
                 <div class="event-dates">Mar 19 &ndash; May 10</div>
                 <div class="event-location">Lisse</div>
                 <div class="event-desc">World's largest flower garden. 7 million tulips, daffodils, and hyacinths across 32 hectares. Peak bloom mid-April.</div>
                 <div class="event-distance">~4.5h from KL</div>
+                <a class="event-link" href="https://keukenhof.nl/en/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-terracotta)" data-lat="52.6324" data-lng="4.7485" data-month="mar-apr" data-country="NL" data-dates="2026-03-27">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Kaasmarkt Alkmaar</div><a class="event-link" href="https://www.kaasmarkt.nl/en-gb" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+                <div class="event-header"><div class="event-name">Kaasmarkt Alkmaar</div><span class="country-badge country-nl">NL</span></div>
                 <div class="event-dates">Mar 27 &ndash; Sep 25 (Fridays)</div>
                 <div class="event-location">Alkmaar</div>
                 <div class="event-desc">Traditional cheese market since 1593. Guilds in white uniforms weigh and carry Gouda &amp; Edam wheels by sledge. Every Friday.</div>
                 <div class="event-distance">~5h from KL</div>
+                <a class="event-link" href="https://www.kaasmarkt.nl/en-gb" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-burgundy)" data-lat="48.8640" data-lng="2.4137" data-month="mar-apr" data-country="FR" data-dates="2026-03-27">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Foire du Tr&ocirc;ne</div><a class="event-link" href="https://www.foiredutrone.com" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+                <div class="event-header"><div class="event-name">Foire du Tr&ocirc;ne</div><span class="country-badge country-fr">FR</span></div>
                 <div class="event-dates">Mar 27 &ndash; May 25</div>
                 <div class="event-location">Paris (Bois de Vincennes)</div>
                 <div class="event-desc">Europe's largest funfair. 220 rides, games, and food stalls &mdash; a Parisian tradition since the Middle Ages. 60 days.</div>
                 <div class="event-distance">~4h &#x1F684; from KL</div>
+                <a class="event-link" href="https://www.foiredutrone.com" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="48.3656" data-lng="10.8945" data-month="mar-apr" data-country="DE" data-dates="2026-04-04">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Augsburger Pl&auml;rrer (Spring)</div><a class="event-link" href="https://augsburger-plaerrer.de/" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Augsburger Pl&auml;rrer (Spring)</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Apr 4&ndash;19</div>
                 <div class="event-location">Augsburg</div>
                 <div class="event-desc">Swabia's largest folk festival. Rides, beer tents, live music. Bavaria's answer to Oktoberfest but smaller and more local.</div>
                 <div class="event-distance">~3h from KL</div>
+                <a class="event-link" href="https://augsburger-plaerrer.de/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-terracotta)" data-lat="52.0115" data-lng="4.7106" data-month="mar-apr" data-country="NL" data-dates="2026-04-03">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Gouda Kaasmarkt</div><a class="event-link" href="https://gouda-cheese.com/events/" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+                <div class="event-header"><div class="event-name">Gouda Kaasmarkt</div><span class="country-badge country-nl">NL</span></div>
                 <div class="event-dates">Apr 3 &ndash; Aug 28 (Thursdays)</div>
                 <div class="event-location">Gouda</div>
                 <div class="event-desc">Authentic cheese market at the Gothic town hall square. Traditional weighing and trading with tastings. Every Thursday.</div>
                 <div class="event-distance">~4h from KL</div>
+                <a class="event-link" href="https://gouda-cheese.com/events/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-burgundy)" data-lat="48.8667" data-lng="2.3131" data-month="mar-apr" data-country="FR" data-dates="2026-04-09">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Art Paris</div><a class="event-link" href="https://www.artparis.com" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+                <div class="event-header"><div class="event-name">Art Paris</div><span class="country-badge country-fr">FR</span></div>
                 <div class="event-dates">Apr 9&ndash;12</div>
                 <div class="event-location">Paris (Grand Palais)</div>
                 <div class="event-desc">165 galleries showcase modern and contemporary art under the iconic glass nave. Major event for art lovers.</div>
                 <div class="event-distance">~4h &#x1F684; from KL</div>
+                <a class="event-link" href="https://www.artparis.com" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-terracotta)" data-lat="52.2352" data-lng="4.4432" data-month="mar-apr" data-country="NL" data-dates="2026-04-18">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Bloemencorso Bollenstreek</div><a class="event-link" href="https://bloemencorso-bollenstreek.nl/en/" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+                <div class="event-header"><div class="event-name">Bloemencorso Bollenstreek</div><span class="country-badge country-nl">NL</span></div>
                 <div class="event-dates">Apr 18</div>
                 <div class="event-location">Noordwijk &rarr; Haarlem</div>
                 <div class="event-desc">79th flower parade. Floats built from millions of hyacinths and tulips along a 42km route. 1M+ spectators.</div>
                 <div class="event-distance">~4.5h from KL</div>
+                <a class="event-link" href="https://bloemencorso-bollenstreek.nl/en/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="49.75" data-lng="7.45" data-month="mar-apr" data-country="DE" data-dates="2026-04-25">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">WeinWanderWochenende</div><a class="event-link" href="https://www.pfalz.de/de/weinwanderwochenende-am-25-april-und-26-april-2026" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">WeinWanderWochenende</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Apr 25&ndash;26</div>
                 <div class="event-location">Pfalz region</div>
                 <div class="event-desc">Guided wine hikes through vineyards with tastings along the route. Led by trained wine guides with scenic trails.</div>
                 <div class="event-distance">RLP</div>
+                <a class="event-link" href="https://www.pfalz.de/de/weinwanderwochenende-am-25-april-und-26-april-2026" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-terracotta)" data-lat="52.3702" data-lng="4.8952" data-month="mar-apr" data-country="NL" data-dates="2026-04-27">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Koningsdag</div><a class="event-link" href="https://www.iamsterdam.com/en/whats-on/kings-day" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+                <div class="event-header"><div class="event-name">Koningsdag</div><span class="country-badge country-nl">NL</span></div>
                 <div class="event-dates">Apr 27</div>
                 <div class="event-location">Amsterdam (nationwide)</div>
                 <div class="event-desc">The Netherlands turns orange. Street markets, canal boat parades, live music, 1M+ visitors in Amsterdam alone. Free.</div>
                 <div class="event-distance">~4.5h from KL</div>
+                <a class="event-link" href="https://www.iamsterdam.com/en/whats-on/kings-day" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="50.0110" data-lng="7.1172" data-month="mar-apr" data-country="DE" data-dates="2026-04-25">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Mosel Wine Festivals</div><a class="event-link" href="https://en.visitmosel.de/wine-cuisine/wine-events" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Mosel Wine Festivals</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Late Apr onward</div>
                 <div class="event-location">Mosel Valley</div>
                 <div class="event-desc">Riverside wine festivals season. Riesling tastings, live music, charming village atmospheres through fall.</div>
                 <div class="event-distance">~1.5h from KL</div>
+                <a class="event-link" href="https://en.visitmosel.de/wine-cuisine/wine-events" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
         </div>
     </div>
@@ -708,59 +720,66 @@
         <div class="events-grid">
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="50.7374" data-lng="7.0982" data-month="may" data-country="DE" data-dates="2026-05-01">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Rhine in Flames</div><a class="event-link" href="https://rif-bonn.de/" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Rhine in Flames</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">May 1&ndash;3</div>
                 <div class="event-location">Bonn</div>
                 <div class="event-desc">40th anniversary. 20 decorated ships glide upriver at dusk with synchronized fireworks and a drone show. Free.</div>
                 <div class="event-distance">~2.5h from KL</div>
+                <a class="event-link" href="https://rif-bonn.de/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="50.1109" data-lng="8.6821" data-month="may" data-country="DE" data-dates="2026-05-02">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Green Sauce Festival</div><a class="event-link" href="https://www.gruene-sosse-festival.de/en/" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Green Sauce Festival</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">May 2&ndash;29</div>
                 <div class="event-location">Frankfurt</div>
                 <div class="event-desc">Month-long celebration of Frankfurt's iconic Gr&uuml;ne So&szlig;e herb sauce at Ro&szlig;markt. Cooking competitions and tastings.</div>
                 <div class="event-distance">~1.5h from KL</div>
+                <a class="event-link" href="https://www.gruene-sosse-festival.de/en/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="50.0110" data-lng="7.1172" data-month="may" data-country="DE" data-dates="2026-05-08">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Festival of the Roman Wine Route</div><a class="event-link" href="https://en.visitmosel.de/wine-cuisine/wine-events" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Festival of the Roman Wine Route</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">May 8&ndash;10</div>
                 <div class="event-location">Mosel</div>
                 <div class="event-desc">38th edition opens the outdoor wine season. Village-to-village wine tasting along the ancient Roman road.</div>
                 <div class="event-distance">~1.5h from KL</div>
+                <a class="event-link" href="https://en.visitmosel.de/wine-cuisine/wine-events" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="49.3769" data-lng="10.1789" data-month="may" data-country="DE" data-dates="2026-05-22">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Meistertrunk Show</div><a class="event-link" href="https://www.meistertrunk.de/en/" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Meistertrunk Show</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">May 22&ndash;25</div>
                 <div class="event-location">Rothenburg ob der Tauber</div>
                 <div class="event-desc">UNESCO-listed play reenacting a 1631 legend. Mayor saved the town by drinking a huge goblet of wine.</div>
                 <div class="event-distance">~2.5h from KL</div>
+                <a class="event-link" href="https://www.meistertrunk.de/en/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-burgundy)" data-lat="48.8620" data-lng="2.3370" data-month="may" data-country="FR" data-dates="2026-05-23">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Nuit Europ&eacute;enne des Mus&eacute;es</div><a class="event-link" href="https://nuitdesmusees.culture.gouv.fr" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+                <div class="event-header"><div class="event-name">Nuit Europ&eacute;enne des Mus&eacute;es</div><span class="country-badge country-fr">FR</span></div>
                 <div class="event-dates">May 23</div>
                 <div class="event-location">Paris (citywide)</div>
                 <div class="event-desc">100+ museums open free from dusk till midnight. Louvre, Orsay, Pompidou &mdash; special tours and installations.</div>
                 <div class="event-distance">~4h &#x1F684; from KL</div>
+                <a class="event-link" href="https://nuitdesmusees.culture.gouv.fr" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-terracotta)" data-lat="52.0775" data-lng="4.3096" data-month="may" data-country="NL" data-dates="2026-05-29">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Dutch Beer Tasting Festival</div><a class="event-link" href="https://denhaag.com/en/calendar/dutch-beer-tasting-festival" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+                <div class="event-header"><div class="event-name">Dutch Beer Tasting Festival</div><span class="country-badge country-nl">NL</span></div>
                 <div class="event-dates">May 29&ndash;30</div>
                 <div class="event-location">The Hague (Grote Kerk)</div>
                 <div class="event-desc">Craft beers inside a 15th-century church. Dozens of Dutch and international breweries in one atmospheric venue.</div>
                 <div class="event-distance">~4h from KL</div>
+                <a class="event-link" href="https://denhaag.com/en/calendar/dutch-beer-tasting-festival" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-burgundy)" data-lat="48.5734" data-lng="7.7521" data-month="may" data-country="FR" data-dates="2026-05-01">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Strasbourg Festival of Artifacts</div><a class="event-link" href="https://ete.strasbourg.eu/en" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+                <div class="event-header"><div class="event-name">Strasbourg Festival of Artifacts</div><span class="country-badge country-fr">FR</span></div>
                 <div class="event-dates">Apr/May</div>
                 <div class="event-location">Strasbourg</div>
                 <div class="event-desc">Arts and culture festival. Street performances, exhibitions, and installations across the historic center.</div>
                 <div class="event-distance">~1.5h from KL</div>
+                <a class="event-link" href="https://ete.strasbourg.eu/en" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
         </div>
     </div>
@@ -771,59 +790,66 @@
         <div class="events-grid">
             <div class="event-card" style="--card-accent: var(--accent-burgundy)" data-lat="48.8530" data-lng="2.3499" data-month="jun" data-country="FR" data-dates="2026-06-06">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Nuit Blanche Paris</div><a class="event-link" href="https://nuitblanche.paris.fr" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+                <div class="event-header"><div class="event-name">Nuit Blanche Paris</div><span class="country-badge country-fr">FR</span></div>
                 <div class="event-dates">Jun 6</div>
                 <div class="event-location">Paris (citywide)</div>
                 <div class="event-desc">25th edition. Dusk-to-dawn free contemporary art installations, performances, and projections transform the city into an open-air gallery.</div>
                 <div class="event-distance">~4h &#x1F684; from KL</div>
+                <a class="event-link" href="https://nuitblanche.paris.fr" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-terracotta)" data-lat="52.0033" data-lng="4.2100" data-month="jun" data-country="NL" data-dates="2026-06-19">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Varend Corso Westland</div><a class="event-link" href="https://varendcorso.nl/en/" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+                <div class="event-header"><div class="event-name">Varend Corso Westland</div><span class="country-badge country-nl">NL</span></div>
                 <div class="event-dates">Jun 19&ndash;21</div>
                 <div class="event-location">Westland (near The Hague)</div>
                 <div class="event-desc">Boats lavishly decorated with flowers and vegetables sail along canals in a colorful 3-day floating parade.</div>
                 <div class="event-distance">~4h from KL</div>
+                <a class="event-link" href="https://varendcorso.nl/en/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-terracotta)" data-lat="52.1065" data-lng="4.2683" data-month="jun" data-country="NL" data-dates="2026-06-15">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Vlaggetjesdag</div><a class="event-link" href="https://denhaag.com/en/calendar/vlaggetjesdag" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+                <div class="event-header"><div class="event-name">Vlaggetjesdag</div><span class="country-badge country-nl">NL</span></div>
                 <div class="event-dates">Mid-Jun</div>
                 <div class="event-location">Scheveningen, The Hague</div>
                 <div class="event-desc">Opening of herring season. First barrel of Hollandse Nieuwe arrives, harbor market, fishing demos, seafood stalls.</div>
                 <div class="event-distance">~4h from KL</div>
+                <a class="event-link" href="https://denhaag.com/en/calendar/vlaggetjesdag" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-burgundy)" data-lat="48.5734" data-lng="7.7521" data-month="jun" data-country="FR" data-dates="2026-06-20">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">F&ecirc;te de la Musique Strasbourg</div><a class="event-link" href="https://culture.strasbourg.eu/concerts/fete-de-la-musique-2026-568160256/" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+                <div class="event-header"><div class="event-name">F&ecirc;te de la Musique Strasbourg</div><span class="country-badge country-fr">FR</span></div>
                 <div class="event-dates">Jun 20&ndash;21</div>
                 <div class="event-location">Strasbourg</div>
                 <div class="event-desc">Free concerts on every street. Rock, jazz, electronic &mdash; the entire city becomes an open-air stage for one night.</div>
                 <div class="event-distance">~1.5h from KL</div>
+                <a class="event-link" href="https://culture.strasbourg.eu/concerts/fete-de-la-musique-2026-568160256/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="54.3233" data-lng="10.1228" data-month="jun" data-country="DE" data-dates="2026-06-20">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Kieler Woche</div><a class="event-link" href="https://www.kieler-woche.de/en/index.php" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Kieler Woche</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Jun 20&ndash;28</div>
                 <div class="event-location">Kiel</div>
                 <div class="event-desc">World's largest sailing event + massive city festival. 9 days of regattas, street food, 3M+ visitors along the harbor.</div>
                 <div class="event-distance">~7h from KL</div>
+                <a class="event-link" href="https://www.kieler-woche.de/en/index.php" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="48.1351" data-lng="11.5820" data-month="jun" data-country="DE" data-dates="2026-06-19">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Tollwood Summer Festival</div><a class="event-link" href="https://www.tollwood.de/en/tollwood-sommerfestival/" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Tollwood Summer Festival</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Jun 19 &ndash; Jul 19</div>
                 <div class="event-location">Munich</div>
                 <div class="event-desc">Month-long culture festival in Olympiapark. 90%+ of events free. Theater, art, "Market of Ideas" bazaar.</div>
                 <div class="event-distance">~4h from KL</div>
+                <a class="event-link" href="https://www.tollwood.de/en/tollwood-sommerfestival/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="50.1442" data-lng="7.2346" data-month="jun" data-country="DE" data-dates="2026-06-03">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Mosel Wine Week</div><a class="event-link" href="https://en.visitmosel.de/cities-culture/event/mosel-wein-woche" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Mosel Wine Week</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Jun 3&ndash;7</div>
                 <div class="event-location">Cochem</div>
                 <div class="event-desc">Wine cooperatives present Riesling and sparkling wines at Endertplatz. Scenic riverside setting.</div>
                 <div class="event-distance">~1.5h from KL</div>
+                <a class="event-link" href="https://en.visitmosel.de/cities-culture/event/mosel-wein-woche" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
         </div>
     </div>
@@ -834,67 +860,75 @@
         <div class="events-grid">
             <div class="event-card" style="--card-accent: var(--accent-forest)" data-lat="49.4401" data-lng="7.7491" data-month="jul" data-country="DE" data-dates="2026-07-03">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Kaiserslautern Altstadtfest</div><a class="event-link" href="https://www.kaiserslautern.de/tourismus_freizeit_kultur/kultur/veranstaltungen/altstadtfest/index.html.de" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Kaiserslautern Altstadtfest</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Early Jul</div>
                 <div class="event-location">Kaiserslautern</div>
                 <div class="event-desc">K-Town's own old town festival. Three days of food stalls and open-air stages in the historic center.</div>
                 <div class="event-distance">LOCAL</div>
+                <a class="event-link" href="https://www.kaiserslautern.de/tourismus_freizeit_kultur/kultur/veranstaltungen/altstadtfest/index.html.de" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="49.7944" data-lng="9.9294" data-month="jul" data-country="DE" data-dates="2026-07-03">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Kiliani Volksfest</div><a class="event-link" href="https://www.wuerzburg.de/events-termine/kilianivolksfest" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Kiliani Volksfest</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Jul 3&ndash;19</div>
                 <div class="event-location">W&uuml;rzburg</div>
                 <div class="event-desc">Lower Franconia's biggest folk festival. 17 days of rides, beer tents, and Franconian wine. Up to 1M visitors.</div>
                 <div class="event-distance">~2.5h from KL</div>
+                <a class="event-link" href="https://www.wuerzburg.de/events-termine/kilianivolksfest" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="47.9990" data-lng="7.8421" data-month="jul" data-country="DE" data-dates="2026-07-02">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Freiburg Wine Festival</div><a class="event-link" href="https://weinfest.freiburg.de/" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Freiburg Wine Festival</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Jul 2&ndash;7</div>
                 <div class="event-location">Freiburg</div>
                 <div class="event-desc">~50 Baden wineries around the M&uuml;nster cathedral. Free admission. Student discount day Jul 7.</div>
                 <div class="event-distance">~2.5h from KL</div>
+                <a class="event-link" href="https://weinfest.freiburg.de/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="50.0110" data-lng="7.1172" data-month="jul" data-country="DE" data-dates="2026-07-10">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Mosel Wine Festival</div><a class="event-link" href="https://en.moselregion.com/event/mosel-wine-festival-1" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Mosel Wine Festival</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Jul 10&ndash;13</div>
                 <div class="event-location">Traben-Trarbach</div>
                 <div class="event-desc">Moselle riverbank transforms into atmospheric festival area. Wine, food, and evening entertainment.</div>
                 <div class="event-distance">~1.5h from KL</div>
+                <a class="event-link" href="https://en.moselregion.com/event/mosel-wine-festival-1" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-burgundy)" data-lat="48.8584" data-lng="2.2945" data-month="jul" data-country="FR" data-dates="2026-07-14">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">F&ecirc;te Nationale (Bastille Day)</div><a class="event-link" href="https://www.paris.fr" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+                <div class="event-header"><div class="event-name">F&ecirc;te Nationale (Bastille Day)</div><span class="country-badge country-fr">FR</span></div>
                 <div class="event-dates">Jul 14</div>
                 <div class="event-location">Paris</div>
                 <div class="event-desc">Military parade on Champs-&Eacute;lys&eacute;es, aircraft flyover in tricolore, fireworks over Eiffel Tower at 11 PM. Bals des Pompiers Jul 13&ndash;14.</div>
                 <div class="event-distance">~4h &#x1F684; from KL</div>
+                <a class="event-link" href="https://www.paris.fr" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-burgundy)" data-lat="48.8575" data-lng="2.3514" data-month="jul" data-country="FR" data-dates="2026-07-01">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Paris Plages</div><a class="event-link" href="https://www.paris.fr/parisplages" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+                <div class="event-header"><div class="event-name">Paris Plages</div><span class="country-badge country-fr">FR</span></div>
                 <div class="event-dates">Jul &ndash; Aug</div>
                 <div class="event-location">Paris (Seine banks)</div>
                 <div class="event-desc">Seine banks transformed into sandy beaches. Deckchairs, palm trees, swimming, and cultural activities. Free.</div>
                 <div class="event-distance">~4h &#x1F684; from KL</div>
+                <a class="event-link" href="https://www.paris.fr/parisplages" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-forest)" data-lat="49.4401" data-lng="7.7600" data-month="jul" data-country="DE" data-dates="2026-07-13">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">KL French Garden Party</div><a class="event-link" href="https://www.kaiserslautern.de/tourismus_freizeit_kultur/veranstaltungen/index.html.de" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">KL French Garden Party</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Jul 13</div>
                 <div class="event-location">Kaiserslautern</div>
                 <div class="event-desc">Garden party in the Gartenschau area. Food, drinks, and live entertainment.</div>
                 <div class="event-distance">LOCAL</div>
+                <a class="event-link" href="https://www.kaiserslautern.de/tourismus_freizeit_kultur/veranstaltungen/index.html.de" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-forest)" data-lat="51.0544" data-lng="3.7174" data-month="jul" data-country="BE" data-dates="2026-07-17">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Gentse Feesten</div><a class="event-link" href="https://visit.gent.be/en/calendar/ghent-festivities" target="_blank" rel="noopener">↗</a><span class="country-badge country-be">BE</span></div>
+                <div class="event-header"><div class="event-name">Gentse Feesten</div><span class="country-badge country-be">BE</span></div>
                 <div class="event-dates">Jul 17&ndash;26</div>
                 <div class="event-location">Ghent</div>
                 <div class="event-desc">Europe's biggest free cultural festival. 10 days of street theater, dance, comedy, food. 1.5M visitors. Free.</div>
                 <div class="event-distance">~4h from KL</div>
+                <a class="event-link" href="https://visit.gent.be/en/calendar/ghent-festivities" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
         </div>
     </div>
@@ -905,27 +939,30 @@
         <div class="events-grid">
             <div class="event-card" style="--card-accent: var(--accent-burgundy)" data-lat="48.0794" data-lng="7.3584" data-month="aug" data-country="FR" data-dates="2026-07-31">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Foire aux Vins d'Alsace</div><a class="event-link" href="https://www.foire-colmar.com/fr/" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+                <div class="event-header"><div class="event-name">Foire aux Vins d'Alsace</div><span class="country-badge country-fr">FR</span></div>
                 <div class="event-dates">Jul 31 &ndash; Aug 9</div>
                 <div class="event-location">Colmar</div>
                 <div class="event-desc">77th edition. 10-day wine fair with 350 exhibitors, Alsace's largest wine bar (250 winemakers, 1,500 wines). Evening concerts.</div>
                 <div class="event-distance">~2h from KL</div>
+                <a class="event-link" href="https://www.foire-colmar.com/fr/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-forest)" data-lat="49.6116" data-lng="6.1319" data-month="aug" data-country="LU" data-dates="2026-08-21">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Schueberfouer</div><a class="event-link" href="https://www.visitluxembourg.com/event/schueberfouer" target="_blank" rel="noopener">↗</a><span class="country-badge country-lu">LU</span></div>
+                <div class="event-header"><div class="event-name">Schueberfouer</div><span class="country-badge country-lu">LU</span></div>
                 <div class="event-dates">Aug 21 &ndash; Sep 9</div>
                 <div class="event-location">Luxembourg City</div>
                 <div class="event-desc">Giant funfair on Glacis Square. 4 hectares of rides, food stalls, and entertainment in the heart of the city.</div>
                 <div class="event-distance">~2h from KL</div>
+                <a class="event-link" href="https://www.visitluxembourg.com/event/schueberfouer" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="48.3656" data-lng="10.8945" data-month="aug" data-country="DE" data-dates="2026-08-28">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Augsburger Herbstpl&auml;rrer</div><a class="event-link" href="https://augsburger-plaerrer.de/" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Augsburger Herbstpl&auml;rrer</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Aug 28 &ndash; Sep 13</div>
                 <div class="event-location">Augsburg</div>
                 <div class="event-desc">Autumn edition of Swabia's biggest Volksfest. Beer tents, rides, parades, fireworks, and Bavarian food.</div>
                 <div class="event-distance">~3h from KL</div>
+                <a class="event-link" href="https://augsburger-plaerrer.de/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
         </div>
     </div>
@@ -936,99 +973,111 @@
         <div class="events-grid">
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="49.4601" data-lng="8.1661" data-month="sep" data-country="DE" data-dates="2026-09-11">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">D&uuml;rkheimer Wurstmarkt</div><a class="event-link" href="https://www.bad-duerkheim.de/kultur-tourismus/veranstaltungen-feste/duerkheimer-wurstmarkt/" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">D&uuml;rkheimer Wurstmarkt</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Sep 11&ndash;15 &amp; 18&ndash;21</div>
                 <div class="event-location">Bad D&uuml;rkheim</div>
                 <div class="event-desc">World's largest wine festival. 600,000+ visitors, 300 award-winning wines, 36 traditional Schubkarchstands. 600 years of history.</div>
                 <div class="event-distance">~30min from KL</div>
+                <a class="event-link" href="https://www.bad-duerkheim.de/kultur-tourismus/veranstaltungen-feste/duerkheimer-wurstmarkt/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="49.9929" data-lng="7.1120" data-month="sep" data-country="DE" data-dates="2026-09-03">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Weinfest der Mittelmosel</div><a class="event-link" href="https://en.bernkastel.de/wine-and-street-festivals" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Weinfest der Mittelmosel</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Sep 3&ndash;7</div>
                 <div class="event-location">Bernkastel-Kues</div>
                 <div class="event-desc">5-day wine festival with fireworks, grand parade, Moselbl&uuml;mchen evening, and wine route through the old town.</div>
                 <div class="event-distance">~1.5h from KL</div>
+                <a class="event-link" href="https://en.bernkastel.de/wine-and-street-festivals" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-burgundy)" data-lat="50.6292" data-lng="3.0573" data-month="sep" data-country="FR" data-dates="2026-09-05">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Braderie de Lille</div><a class="event-link" href="https://en.lilletourism.com/explore/hello-culture/major-events/lille-flea-market/" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+                <div class="event-header"><div class="event-name">Braderie de Lille</div><span class="country-badge country-fr">FR</span></div>
                 <div class="event-dates">Sep 5&ndash;6</div>
                 <div class="event-location">Lille</div>
                 <div class="event-desc">Europe's biggest flea market. 2M visitors, 10,000+ vendors, 100km of stalls. Free. Bring cash.</div>
                 <div class="event-distance">~5h from KL</div>
+                <a class="event-link" href="https://en.lilletourism.com/explore/hello-culture/major-events/lille-flea-market/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-forest)" data-lat="50.8466" data-lng="4.3528" data-month="sep" data-country="BE" data-dates="2026-09-04">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Belgian Beer Weekend</div><a class="event-link" href="https://www.belgianbeerweekend.be/" target="_blank" rel="noopener">↗</a><span class="country-badge country-be">BE</span></div>
+                <div class="event-header"><div class="event-name">Belgian Beer Weekend</div><span class="country-badge country-be">BE</span></div>
                 <div class="event-dates">Sep 4&ndash;6</div>
                 <div class="event-location">Brussels</div>
                 <div class="event-desc">Grand-Place transforms into one big bar. 500+ beers from 50+ breweries. Live music, parades. Free entry.</div>
                 <div class="event-distance">~4h from KL</div>
+                <a class="event-link" href="https://www.belgianbeerweekend.be/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-forest)" data-lat="51.2093" data-lng="3.2247" data-month="sep" data-country="BE" data-dates="2026-09-12">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Bruges Beer Festival</div><a class="event-link" href="https://www.brugsbierfestival.be/en/" target="_blank" rel="noopener">↗</a><span class="country-badge country-be">BE</span></div>
+                <div class="event-header"><div class="event-name">Bruges Beer Festival</div><span class="country-badge country-be">BE</span></div>
                 <div class="event-dates">Sep 12&ndash;13</div>
                 <div class="event-location">Bruges</div>
                 <div class="event-desc">18th edition. ~50 breweries, 350 beers in the BMCC. 10 years of Belgian beer as UNESCO heritage.</div>
                 <div class="event-distance">~5h from KL</div>
+                <a class="event-link" href="https://www.brugsbierfestival.be/en/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-terracotta)" data-lat="51.8836" data-lng="4.6381" data-month="sep" data-country="NL" data-dates="2026-09-07">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Verlichtingsweek Kinderdijk</div><a class="event-link" href="https://kinderdijk.nl/en/agenda/illumination-week/" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+                <div class="event-header"><div class="event-name">Verlichtingsweek Kinderdijk</div><span class="country-badge country-nl">NL</span></div>
                 <div class="event-dates">Sep 7&ndash;12</div>
                 <div class="event-location">Kinderdijk (near Rotterdam)</div>
                 <div class="event-desc">19 UNESCO windmills illuminated after dark. Boat tours, concerts, and mill market along the lit waterways.</div>
                 <div class="event-distance">~3.5h from KL</div>
+                <a class="event-link" href="https://kinderdijk.nl/en/agenda/illumination-week/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-terracotta)" data-lat="52.3676" data-lng="4.9041" data-month="sep" data-country="NL" data-dates="2026-09-12">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Open Monumentendag Amsterdam</div><a class="event-link" href="https://www.iamsterdam.com/en/whats-on/calendar/festivals/events/open-monument-day" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+                <div class="event-header"><div class="event-name">Open Monumentendag Amsterdam</div><span class="country-badge country-nl">NL</span></div>
                 <div class="event-dates">Sep 12&ndash;13</div>
                 <div class="event-location">Amsterdam</div>
                 <div class="event-desc">40th edition. Hundreds of normally closed monuments open for free. Hidden churches, historic houses, rooftops.</div>
                 <div class="event-distance">~5h from KL</div>
+                <a class="event-link" href="https://www.iamsterdam.com/en/whats-on/calendar/festivals/events/open-monument-day" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-terracotta)" data-lat="52.0796" data-lng="4.3137" data-month="sep" data-country="NL" data-dates="2026-09-15">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Prinsjesdag</div><a class="event-link" href="https://denhaag.com/en/calendar/princes-day" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+                <div class="event-header"><div class="event-name">Prinsjesdag</div><span class="country-badge country-nl">NL</span></div>
                 <div class="event-dates">Sep 15</div>
                 <div class="event-location">The Hague</div>
                 <div class="event-desc">Opening of Dutch parliament. King rides the Glass Coach to the Ridderzaal for the Speech from the Throne.</div>
                 <div class="event-distance">~4h from KL</div>
+                <a class="event-link" href="https://denhaag.com/en/calendar/princes-day" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-burgundy)" data-lat="48.8606" data-lng="2.3376" data-month="sep" data-country="FR" data-dates="2026-09-19">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Journ&eacute;es du Patrimoine</div><a class="event-link" href="https://journeesdupatrimoine.culture.gouv.fr" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+                <div class="event-header"><div class="event-name">Journ&eacute;es du Patrimoine</div><span class="country-badge country-fr">FR</span></div>
                 <div class="event-dates">Sep 19&ndash;20</div>
                 <div class="event-location">Paris (citywide)</div>
                 <div class="event-desc">&Eacute;lys&eacute;e Palace, private mansions, hidden courtyards open free. Hundreds of normally closed historic buildings.</div>
                 <div class="event-distance">~4h &#x1F684; from KL</div>
+                <a class="event-link" href="https://journeesdupatrimoine.culture.gouv.fr" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="48.1316" data-lng="11.5497" data-month="sep" data-country="DE" data-dates="2026-09-19">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Oktoberfest</div><a class="event-link" href="https://www.oktoberfest.de/en" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Oktoberfest</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Sep 19 &ndash; Oct 4</div>
                 <div class="event-location">Munich</div>
                 <div class="event-desc">191st edition on the Theresienwiese. 16 days, 6M+ visitors, massive beer tents, traditional rides, Bavarian food.</div>
                 <div class="event-distance">~4h from KL</div>
+                <a class="event-link" href="https://www.oktoberfest.de/en" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="48.7758" data-lng="9.1829" data-month="sep" data-country="DE" data-dates="2026-09-25">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Cannstatter Volksfest</div><a class="event-link" href="https://www.cannstatter-volksfest.de/en/" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Cannstatter Volksfest</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Sep 25 &ndash; Oct 11</div>
                 <div class="event-location">Stuttgart</div>
                 <div class="event-desc">Stuttgart's own "Oktoberfest" on the Wasen. 17 days, beer tents, rides, less touristy and more local than Munich.</div>
                 <div class="event-distance">~2h from KL</div>
+                <a class="event-link" href="https://www.cannstatter-volksfest.de/en/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="49.3517" data-lng="8.1414" data-month="sep" data-country="DE" data-dates="2026-09-25">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Deutsches Weinlesefest</div><a class="event-link" href="https://www.neustadt.eu/Tourism-Wine/TOP-EVENTS/Autumn/Deutsches-Weinlesefest/" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Deutsches Weinlesefest</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Sep 25 &ndash; Oct 12</div>
                 <div class="event-location">Neustadt an der Weinstra&szlig;e</div>
                 <div class="event-desc">German Wine Harvest Festival. Wine Queen coronation, 100+ floats parade, Palatinate wine village.</div>
                 <div class="event-distance">~30min from KL</div>
+                <a class="event-link" href="https://www.neustadt.eu/Tourism-Wine/TOP-EVENTS/Autumn/Deutsches-Weinlesefest/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
         </div>
     </div>
@@ -1039,35 +1088,39 @@
         <div class="events-grid">
             <div class="event-card" style="--card-accent: var(--accent-terracotta)" data-lat="52.1601" data-lng="4.4970" data-month="oct" data-country="NL" data-dates="2026-10-01">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Leidens Ontzet (3 October Festival)</div><a class="event-link" href="https://3october.nl/english/" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+                <div class="event-header"><div class="event-name">Leidens Ontzet (3 October Festival)</div><span class="country-badge country-nl">NL</span></div>
                 <div class="event-dates">Oct 1&ndash;3</div>
                 <div class="event-location">Leiden</div>
                 <div class="event-desc">Commemorates 1574 liberation from Spanish siege. Herring &amp; white bread distribution, hutspot stew, grand parade, fireworks.</div>
                 <div class="event-distance">~4h from KL</div>
+                <a class="event-link" href="https://3october.nl/english/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-gold)" data-lat="49.4401" data-lng="7.7550" data-month="oct" data-country="DE" data-dates="2026-10-04">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Erntedankfest</div><a class="event-link" href="https://www.pfalz.de/de" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Erntedankfest</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Oct 4</div>
                 <div class="event-location">Throughout Germany</div>
                 <div class="event-desc">German harvest thanksgiving. Church services, parades, seasonal produce displays, traditional food. First Sunday of October.</div>
                 <div class="event-distance">varies</div>
+                <a class="event-link" href="https://www.pfalz.de/de" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-burgundy)" data-lat="48.8867" data-lng="2.3431" data-month="oct" data-country="FR" data-dates="2026-10-07">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">F&ecirc;te des Vendanges de Montmartre</div><a class="event-link" href="https://fetedesvendangesdemontmartre.com" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+                <div class="event-header"><div class="event-name">F&ecirc;te des Vendanges de Montmartre</div><span class="country-badge country-fr">FR</span></div>
                 <div class="event-dates">Oct 7&ndash;11</div>
                 <div class="event-location">Paris (Montmartre)</div>
                 <div class="event-desc">93rd grape harvest festival. Wine parade, tastings of Clos Montmartre wine, food trail, free concerts across the hill.</div>
                 <div class="event-distance">~4h &#x1F684; from KL</div>
+                <a class="event-link" href="https://fetedesvendangesdemontmartre.com" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-burgundy)" data-lat="48.8322" data-lng="2.2876" data-month="oct" data-country="FR" data-dates="2026-10-28">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Salon du Chocolat</div><a class="event-link" href="https://www.salon-du-chocolat.com" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+                <div class="event-header"><div class="event-name">Salon du Chocolat</div><span class="country-badge country-fr">FR</span></div>
                 <div class="event-dates">Oct 28 &ndash; Nov 1</div>
                 <div class="event-location">Paris (Porte de Versailles)</div>
                 <div class="event-desc">World's largest chocolate &amp; pastry event. 500+ exhibitors, tastings, demos, and the famous chocolate fashion show.</div>
                 <div class="event-distance">~4h &#x1F684; from KL</div>
+                <a class="event-link" href="https://www.salon-du-chocolat.com" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
         </div>
     </div>
@@ -1078,43 +1131,48 @@
         <div class="events-grid">
             <div class="event-card" style="--card-accent: var(--accent-terracotta)" data-lat="51.4416" data-lng="5.4697" data-month="nov" data-country="NL" data-dates="2026-11-07">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">GLOW Eindhoven</div><a class="event-link" href="https://gloweindhoven.nl/en/" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+                <div class="event-header"><div class="event-name">GLOW Eindhoven</div><span class="country-badge country-nl">NL</span></div>
                 <div class="event-dates">Nov 7&ndash;14</div>
                 <div class="event-location">Eindhoven</div>
                 <div class="event-desc">Free week-long light art festival. Indoor and outdoor installations, projections, and interactive works along a walking route.</div>
                 <div class="event-distance">~3h from KL</div>
+                <a class="event-link" href="https://gloweindhoven.nl/en/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-terracotta)" data-lat="52.3676" data-lng="4.9041" data-month="nov" data-country="NL" data-dates="2026-11-07">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Museum Nacht Amsterdam</div><a class="event-link" href="https://www.iamsterdam.com/en/whats-on/calendar/festivals/events/museum-night-amsterdam" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+                <div class="event-header"><div class="event-name">Museum Nacht Amsterdam</div><span class="country-badge country-nl">NL</span></div>
                 <div class="event-dates">Nov 7</div>
                 <div class="event-location">Amsterdam</div>
                 <div class="event-desc">50+ museums open late with DJs, live performances, workshops, food. One ticket, one night.</div>
                 <div class="event-distance">~5h from KL</div>
+                <a class="event-link" href="https://www.iamsterdam.com/en/whats-on/calendar/festivals/events/museum-night-amsterdam" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-burgundy)" data-lat="48.5734" data-lng="7.7521" data-month="nov" data-country="FR" data-dates="2026-11-01">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Jazzdor Strasbourg</div><a class="event-link" href="https://jazzdor.com/" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+                <div class="event-header"><div class="event-name">Jazzdor Strasbourg</div><span class="country-badge country-fr">FR</span></div>
                 <div class="event-dates">Nov (15 days)</div>
                 <div class="event-location">Strasbourg</div>
                 <div class="event-desc">15-day international jazz festival. Avant-garde and contemporary jazz from European and international artists.</div>
                 <div class="event-distance">~1.5h from KL</div>
+                <a class="event-link" href="https://jazzdor.com/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-burgundy)" data-lat="46.0566" data-lng="4.7538" data-month="nov" data-country="FR" data-dates="2026-11-19">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Beaujolais Nouveau</div><a class="event-link" href="https://www.beaujolais.com/en/visit/what-s-on-in-beaujolais-save-the-dates/" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+                <div class="event-header"><div class="event-name">Beaujolais Nouveau</div><span class="country-badge country-fr">FR</span></div>
                 <div class="event-dates">Nov 19</div>
                 <div class="event-location">Beaujolais / all France</div>
                 <div class="event-desc">Annual release of new wine at midnight on 3rd Thursday. Barrel processions, cellar tastings, village parties.</div>
                 <div class="event-distance">~5h from KL</div>
+                <a class="event-link" href="https://www.beaujolais.com/en/visit/what-s-on-in-beaujolais-save-the-dates/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
             <div class="event-card" style="--card-accent: var(--accent-terracotta)" data-lat="52.3676" data-lng="4.9041" data-month="nov" data-country="NL" data-dates="2026-11-26">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Amsterdam Light Festival</div><a class="event-link" href="https://amsterdamlightfestival.com/en" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+                <div class="event-header"><div class="event-name">Amsterdam Light Festival</div><span class="country-badge country-nl">NL</span></div>
                 <div class="event-dates">Nov 26 &ndash; Jan 17</div>
                 <div class="event-location">Amsterdam</div>
                 <div class="event-desc">15th edition. 20+ light art installations along the canals. 53 days, best seen by boat or walking. Free to view.</div>
                 <div class="event-distance">~5h from KL</div>
+                <a class="event-link" href="https://amsterdamlightfestival.com/en" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
         </div>
     </div>
@@ -1125,11 +1183,12 @@
         <div class="events-grid">
             <div class="event-card" style="--card-accent: var(--accent-burgundy)" data-lat="45.7640" data-lng="4.8357" data-month="dec" data-country="FR" data-dates="2026-12-05">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">F&ecirc;te des Lumi&egrave;res Lyon</div><a class="event-link" href="https://www.fetedeslumieres.lyon.fr/en" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+                <div class="event-header"><div class="event-name">F&ecirc;te des Lumi&egrave;res Lyon</div><span class="country-badge country-fr">FR</span></div>
                 <div class="event-dates">Dec 5&ndash;8</div>
                 <div class="event-location">Lyon</div>
                 <div class="event-desc">Spectacular light installations across the city center. Historic fa&ccedil;ades and rivers as canvases. Candles in every window. Free.</div>
                 <div class="event-distance">~5.5h from KL</div>
+                <a class="event-link" href="https://www.fetedeslumieres.lyon.fr/en" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
         </div>
     </div>
@@ -1140,11 +1199,12 @@
         <div class="events-grid">
             <div class="event-card" style="--card-accent: var(--accent-forest)" data-lat="49.35" data-lng="8.16" data-month="ongoing" data-country="DE" data-dates="2026-03-01">
                 <button class="fav-star" aria-label="Favorite">&#9734;</button>
-                <div class="event-header"><div class="event-name">Pfalz Village Wine Festivals</div><a class="event-link" href="https://www.pfalz-weinfeste.de/termine/" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+                <div class="event-header"><div class="event-name">Pfalz Village Wine Festivals</div><span class="country-badge country-de">DE</span></div>
                 <div class="event-dates">Mar through Nov</div>
                 <div class="event-location">Deutsche Weinstra&szlig;e</div>
                 <div class="event-desc">Hundreds of village wine festivals, Mar&ndash;Nov. Every village has its own Weinfest or Weinkerwe. Full calendar at pfalz-weinfeste.de.</div>
                 <div class="event-distance">LOCAL</div>
+                <a class="event-link" href="https://www.pfalz-weinfeste.de/termine/" target="_blank" rel="noopener">Official Site ↗</a>
             </div>
         </div>
     </div>
@@ -1170,93 +1230,103 @@
     <div class="events-grid fade-in">
         <div class="market-card" data-lat="49.4541" data-lng="11.0775" data-month="nov" data-country="DE" data-dates="2026-11-27">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">N&uuml;rnberger Christkindlesmarkt</div><a class="event-link" href="https://www.christkindlesmarkt.de" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">N&uuml;rnberger Christkindlesmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">Nov 27 &ndash; Dec 24</div>
             <div class="event-location">Nuremberg</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Lebkuchen, Rostbratwurst, Zwetschgenm&auml;nnle (prune figurines), iconic red-gold stalls</div>
             <div class="event-distance">~3h from KL</div>
+            <a class="event-link" href="https://www.christkindlesmarkt.de" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="50.9413" data-lng="6.9583" data-month="nov" data-country="DE" data-dates="2026-11-21">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">K&ouml;lner Weihnachtsmarkt am Dom</div><a class="event-link" href="https://www.koelnerweihnachtsmarkt.com" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">K&ouml;lner Weihnachtsmarkt am Dom</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">~Nov 21 &ndash; Dec 23</div>
             <div class="event-location">Cologne</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Best cathedral backdrop in Europe; warm K&ouml;lsch beer; 7 themed markets across the city</div>
             <div class="event-distance">~2h15 from KL</div>
+            <a class="event-link" href="https://www.koelnerweihnachtsmarkt.com" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="48.7758" data-lng="9.1829" data-month="nov" data-country="DE" data-dates="2026-11-25">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Stuttgarter Weihnachtsmarkt</div><a class="event-link" href="https://www.stuttgarter-weihnachtsmarkt.de" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Stuttgarter Weihnachtsmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">Nov 25 &ndash; Dec 23</div>
             <div class="event-location">Stuttgart</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Most ornate stall decorations in Germany; enormous scale; Maultaschen &amp; Sp&auml;tzle</div>
             <div class="event-distance">~1h45 from KL</div>
+            <a class="event-link" href="https://www.stuttgarter-weihnachtsmarkt.de" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="51.0487" data-lng="13.7384" data-month="nov" data-country="DE" data-dates="2026-11-25">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Dresdner Striezelmarkt</div><a class="event-link" href="https://striezelmarkt.dresden.de" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Dresdner Striezelmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">Nov 25 &ndash; Dec 24</div>
             <div class="event-location">Dresden</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Oldest market in Germany (1434); Dresdner Stollen festival; Erzgebirge wooden crafts</div>
             <div class="event-distance">~5.5h from KL</div>
+            <a class="event-link" href="https://striezelmarkt.dresden.de" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="48.1374" data-lng="11.5755" data-month="nov" data-country="DE" data-dates="2026-11-20">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">M&uuml;nchner Christkindlmarkt</div><a class="event-link" href="https://www.muenchen.de/en/events/munich-christkindlmarkt-info-about-christmas-market" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">M&uuml;nchner Christkindlmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">Nov 20 &ndash; Dec 24</div>
             <div class="event-location">Munich</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Spectacular Marienplatz setting; Bavarian food &amp; Gl&uuml;hwein; Kripperlmarkt (nativity market)</div>
             <div class="event-distance">~3.5h from KL</div>
+            <a class="event-link" href="https://www.muenchen.de/en/events/munich-christkindlmarkt-info-about-christmas-market" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="50.1109" data-lng="8.6821" data-month="nov" data-country="DE" data-dates="2026-11-23">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Frankfurter Weihnachtsmarkt</div><a class="event-link" href="https://www.frankfurt-tourismus.de/en/Discover-Experience/Events/Christmas-market" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Frankfurter Weihnachtsmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">Nov 23 &ndash; Dec 22</div>
             <div class="event-location">Frankfurt</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Iconic R&ouml;merberg setting; Bethm&auml;nnchen (marzipan cookies); massive 30m tree</div>
             <div class="event-distance">~1.5h from KL</div>
+            <a class="event-link" href="https://www.frankfurt-tourismus.de/en/Discover-Experience/Events/Christmas-market" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="53.5503" data-lng="9.9928" data-month="nov" data-country="DE" data-dates="2026-11-20">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Hamburger Weihnachtsmarkt</div><a class="event-link" href="https://www.hamburg.de/weihnachtsmaerkte" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Hamburger Weihnachtsmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">~Nov 20 &ndash; Dec 23</div>
             <div class="event-location">Hamburg</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Floating tree on Alster; Santa Pauli (adults-only); maritime-themed harbor markets</div>
             <div class="event-distance">~5.5h from KL</div>
+            <a class="event-link" href="https://www.hamburg.de/weihnachtsmaerkte" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="49.4094" data-lng="8.6930" data-month="nov" data-country="DE" data-dates="2026-11-23">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Heidelberger Weihnachtsmarkt</div><a class="event-link" href="https://www.heidelberg-marketing.de/en/event/heidelberg-christmas-market" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Heidelberger Weihnachtsmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">Nov 23 &ndash; Dec 22</div>
             <div class="event-location">Heidelberg</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Romantic castle backdrop; 6 connected market plazas; ice rink; student-town energy</div>
             <div class="event-distance">~1h from KL</div>
+            <a class="event-link" href="https://www.heidelberg-marketing.de/en/event/heidelberg-christmas-market" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="50.7753" data-lng="6.0839" data-month="nov" data-country="DE" data-dates="2026-11-20">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Aachener Weihnachtsmarkt</div><a class="event-link" href="https://www.aachener-weihnachtsmarkt.de" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Aachener Weihnachtsmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">~Nov 20 &ndash; Dec 23</div>
             <div class="event-location">Aachen</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Aachener Printen (spiced cookies); UNESCO cathedral; living nativity scene</div>
             <div class="event-distance">~2h45 from KL</div>
+            <a class="event-link" href="https://www.aachener-weihnachtsmarkt.de" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="49.3769" data-lng="10.1789" data-month="nov" data-country="DE" data-dates="2026-11-20">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Reiterlesmarkt Rothenburg</div><a class="event-link" href="https://www.tourismus.rothenburg.de" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Reiterlesmarkt Rothenburg</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">Nov 20 &ndash; Dec 23</div>
             <div class="event-location">Rothenburg ob der Tauber</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Most picturesque medieval setting; Schneeballen pastry; K&auml;the Wohlfahrt year-round shop</div>
             <div class="event-distance">~2.5h from KL</div>
+            <a class="event-link" href="https://www.tourismus.rothenburg.de" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
     </div>
 
@@ -1265,93 +1335,103 @@
     <div class="events-grid fade-in">
         <div class="market-card" data-lat="49.4447" data-lng="7.7689" data-month="nov" data-country="DE" data-dates="2026-11-23">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Kaiserslauterer Weihnachtsmarkt</div><a class="event-link" href="https://www.kaiserslautern.de" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Kaiserslauterer Weihnachtsmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">~Nov 23 &ndash; Dec 23</div>
             <div class="event-location">Kaiserslautern</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Pf&auml;lzer Gl&uuml;hwein from local wineries; community atmosphere; home-base market</div>
             <div class="event-distance">LOCAL</div>
+            <a class="event-link" href="https://www.kaiserslautern.de" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="49.4617" data-lng="8.1722" data-month="nov" data-country="DE" data-dates="2026-11-28">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Bad D&uuml;rkheimer Weihnachtsmarkt</div><a class="event-link" href="https://www.bad-duerkheim.de" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Bad D&uuml;rkheimer Weihnachtsmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">~Nov 28 &ndash; Dec 22</div>
             <div class="event-location">Bad D&uuml;rkheim</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Exceptional Riesling Gl&uuml;hwein from local estates; spa-town charm; Wine Road gateway</div>
             <div class="event-distance">~30min from KL</div>
+            <a class="event-link" href="https://www.bad-duerkheim.de" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="49.4119" data-lng="8.1817" data-month="dec" data-country="DE" data-dates="2026-11-28">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Deidesheimer Advent</div><a class="event-link" href="https://deidesheim.de/weihnachtsmarkt" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Deidesheimer Advent</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">Advent weekends</div>
             <div class="event-location">Deidesheim</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Finest Pfalz wine village; premium vintner Gl&uuml;hwein; gourmet regional food; intimate</div>
             <div class="event-distance">~30min from KL</div>
+            <a class="event-link" href="https://deidesheim.de/weihnachtsmarkt" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="49.3517" data-lng="8.1389" data-month="nov" data-country="DE" data-dates="2026-11-25">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Neustadter Weihnachtsmarkt</div><a class="event-link" href="https://www.neustadt.eu" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Neustadter Weihnachtsmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">~Nov 25 &ndash; Dec 22</div>
             <div class="event-location">Neustadt an der Weinstra&szlig;e</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Wine Road capital; excellent Pf&auml;lzer Gl&uuml;hwein; half-timbered setting</div>
             <div class="event-distance">~35min from KL</div>
+            <a class="event-link" href="https://www.neustadt.eu" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="49.3173" data-lng="8.4311" data-month="nov" data-country="DE" data-dates="2026-11-25">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Speyerer Weihnachts- &amp; Neujahrsmarkt</div><a class="event-link" href="https://www.speyer.de" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Speyerer Weihnachts- &amp; Neujahrsmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">Nov 25 &ndash; Jan 6</div>
             <div class="event-location">Speyer</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Cathedral backdrop (UNESCO); runs to January 6; beautiful Maximilianstra&szlig;e promenade</div>
             <div class="event-distance">~45min from KL</div>
+            <a class="event-link" href="https://www.speyer.de" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="49.4875" data-lng="8.4660" data-month="nov" data-country="DE" data-dates="2026-11-23">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Mannheimer Weihnachtsmarkt</div><a class="event-link" href="https://www.weihnachtsmarkt-mannheim.de" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Mannheimer Weihnachtsmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">~Nov 23 &ndash; Dec 23</div>
             <div class="event-location">Mannheim</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Wasserturm backdrop; 200+ stalls across 3 areas; excellent food variety</div>
             <div class="event-distance">~50min from KL</div>
+            <a class="event-link" href="https://www.weihnachtsmarkt-mannheim.de" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="49.9987" data-lng="8.2738" data-month="nov" data-country="DE" data-dates="2026-11-26">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Mainzer Weihnachtsmarkt</div><a class="event-link" href="https://www.mainz.de/weihnachtsmarkt" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Mainzer Weihnachtsmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">~Nov 26 &ndash; Dec 23</div>
             <div class="event-location">Mainz</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">1,000-year-old cathedral; Rheinhessen wine Gl&uuml;hwein; high-quality crafts; less touristy</div>
             <div class="event-distance">~1h from KL</div>
+            <a class="event-link" href="https://www.mainz.de/weihnachtsmarkt" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="49.7557" data-lng="6.6414" data-month="nov" data-country="DE" data-dates="2026-11-20">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Trierer Weihnachtsmarkt</div><a class="event-link" href="https://www.trier-info.de/weihnachtsmarkt" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Trierer Weihnachtsmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">~Nov 20 &ndash; Dec 22</div>
             <div class="event-location">Trier</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Roman-era backdrop (oldest city in Germany); Mosel wine Gl&uuml;hwein; Viez (apple wine)</div>
             <div class="event-distance">~1.5h from KL</div>
+            <a class="event-link" href="https://www.trier-info.de/weihnachtsmarkt" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="50.3533" data-lng="7.5943" data-month="nov" data-country="DE" data-dates="2026-11-20">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Koblenzer Weihnachtsmarkt</div><a class="event-link" href="https://www.koblenzer-weihnachtsmarkt.de" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Koblenzer Weihnachtsmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">~Nov 20 &ndash; Jan 4</div>
             <div class="event-location">Koblenz</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Rhine-Moselle confluence; fortress backdrop; extends into January; cozy Altstadt plazas</div>
             <div class="event-distance">~1h20 from KL</div>
+            <a class="event-link" href="https://www.koblenzer-weihnachtsmarkt.de" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="49.9153" data-lng="7.0756" data-month="nov" data-country="DE" data-dates="2026-11-20">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Bernkastel-Kueser Weihnachtsmarkt</div><a class="event-link" href="https://en.bernkastel.de/christmas-market" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Bernkastel-Kueser Weihnachtsmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">Nov 20 &ndash; Jan 2 (weekends)</div>
             <div class="event-location">Bernkastel-Kues</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Largest Advent calendar (half-timbered house); Mosel Riesling Gl&uuml;hwein; torchlight floats</div>
             <div class="event-distance">~1.5h from KL</div>
+            <a class="event-link" href="https://en.bernkastel.de/christmas-market" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
     </div>
 
@@ -1360,57 +1440,63 @@
     <div class="events-grid fade-in">
         <div class="market-card" data-lat="47.9167" data-lng="8.0833" data-month="nov" data-country="DE" data-dates="2026-11-27">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Ravennaschlucht (Ravenna Gorge)</div><a class="event-link" href="https://www.hochschwarzwald.de/en/christmas-market-in-the-ravenna-gorge" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Ravennaschlucht (Ravenna Gorge)</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">Weekends late Nov &ndash; Dec</div>
             <div class="event-location">Black Forest (near Freiburg)</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Most spectacular setting of any market in Europe; illuminated viaduct; Black Forest Kirschtorte</div>
             <div class="event-distance">~2.5h from KL</div>
+            <a class="event-link" href="https://www.hochschwarzwald.de/en/christmas-market-in-the-ravenna-gorge" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="48.7394" data-lng="9.3044" data-month="nov" data-country="DE" data-dates="2026-11-24">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Esslinger Mittelaltermarkt</div><a class="event-link" href="https://www.esslingen-marketing.de" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Esslinger Mittelaltermarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">Nov 24 &ndash; Dec 22</div>
             <div class="event-location">Esslingen am Neckar</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Best medieval-themed market in Germany; live blacksmiths &amp; mead; fire artists</div>
             <div class="event-distance">~2h from KL</div>
+            <a class="event-link" href="https://www.esslingen-marketing.de" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="48.3231" data-lng="8.9672" data-month="nov" data-country="DE" data-dates="2026-11-21">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Burg Hohenzollern Winterzauber</div><a class="event-link" href="https://www.burg-hohenzollern.com" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Burg Hohenzollern Winterzauber</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">~Nov 21 &ndash; Jan 6</div>
             <div class="event-location">Bisingen (near Hechingen)</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Most spectacular castle Christmas in Germany; fairy-tale setting; family-friendly</div>
             <div class="event-distance">~2.5h from KL</div>
+            <a class="event-link" href="https://www.burg-hohenzollern.com" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="50.5669" data-lng="6.7325" data-month="dec" data-country="DE" data-dates="2026-11-28">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Burgweihnacht Burg Satzvey</div><a class="event-link" href="https://www.burgsatzvey.de" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Burgweihnacht Burg Satzvey</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">Advent weekends</div>
             <div class="event-location">Mechernich (Eifel)</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Medieval nativity play; moated castle; jousting &amp; medieval entertainment</div>
             <div class="event-distance">~2h15 from KL</div>
+            <a class="event-link" href="https://www.burgsatzvey.de" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="50.1453" data-lng="7.1667" data-month="dec" data-country="DE" data-dates="2026-11-28">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Reichsburg Cochem Burgweihnacht</div><a class="event-link" href="https://www.cochem.de" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Reichsburg Cochem Burgweihnacht</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">Advent weekends</div>
             <div class="event-location">Cochem</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Dramatic hilltop castle on the Moselle; live nativity; intimate &amp; atmospheric</div>
             <div class="event-distance">~1h15 from KL</div>
+            <a class="event-link" href="https://www.cochem.de" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="48.8950" data-lng="9.1917" data-month="nov" data-country="DE" data-dates="2026-11-24">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Ludwigsburger Barock-Weihnachtsmarkt</div><a class="event-link" href="https://www.ludwigsburg.de" target="_blank" rel="noopener">↗</a><span class="country-badge country-de">DE</span></div>
+            <div class="event-header"><div class="market-name">Ludwigsburger Barock-Weihnachtsmarkt</div><span class="country-badge country-de">DE</span></div>
             <div class="market-dates">~Nov 24 &ndash; Dec 22</div>
             <div class="event-location">Ludwigsburg</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Baroque architecture theme; enchanted forest; angel's alley; near Ludwigsburg Palace</div>
             <div class="event-distance">~1h45 from KL</div>
+            <a class="event-link" href="https://www.ludwigsburg.de" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
     </div>
 
@@ -1419,57 +1505,63 @@
     <div class="events-grid fade-in">
         <div class="market-card" data-lat="48.5734" data-lng="7.7521" data-month="nov" data-country="FR" data-dates="2026-11-27">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Christkindelsmärik Strasbourg</div><a class="event-link" href="https://noel.strasbourg.eu" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+            <div class="event-header"><div class="market-name">Christkindelsmärik Strasbourg</div><span class="country-badge country-fr">FR</span></div>
             <div class="market-dates">~Nov 27 &ndash; Dec 24</div>
             <div class="event-location">Strasbourg</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Capital of Christmas (since 1570); best atmosphere in France; bredele &amp; vin chaud; 12 locations</div>
             <div class="event-distance">~1.5h from KL</div>
+            <a class="event-link" href="https://noel.strasbourg.eu" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="48.0794" data-lng="7.3558" data-month="nov" data-country="FR" data-dates="2026-11-21">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">March&eacute;s de No&euml;l de Colmar</div><a class="event-link" href="https://www.noel-colmar.com" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+            <div class="event-header"><div class="market-name">March&eacute;s de No&euml;l de Colmar</div><span class="country-badge country-fr">FR</span></div>
             <div class="market-dates">~Nov 21 &ndash; Dec 29</div>
             <div class="event-location">Colmar</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Most photogenic in Alsace; "Petite Venise" canals; runs to Dec 29</div>
             <div class="event-distance">~2h from KL</div>
+            <a class="event-link" href="https://www.noel-colmar.com" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="49.1193" data-lng="6.1757" data-month="nov" data-country="FR" data-dates="2026-11-20">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">March&eacute; de No&euml;l de Metz</div><a class="event-link" href="https://www.metz.fr/noel" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+            <div class="event-header"><div class="market-name">March&eacute; de No&euml;l de Metz</div><span class="country-badge country-fr">FR</span></div>
             <div class="market-dates">~Nov 20 &ndash; Dec 30</div>
             <div class="event-location">Metz</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Gothic cathedral illuminations; 5 market squares; Ferris wheel; less crowded than Strasbourg</div>
             <div class="event-distance">~1.5h from KL</div>
+            <a class="event-link" href="https://www.metz.fr/noel" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="48.8634" data-lng="2.3275" data-month="nov" data-country="FR" data-dates="2026-11-15">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">March&eacute; de No&euml;l des Tuileries</div><a class="event-link" href="https://www.sortiraparis.com/en/what-to-visit-in-paris/walks/articles/46357-tuileries-christmas-market" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+            <div class="event-header"><div class="market-name">March&eacute; de No&euml;l des Tuileries</div><span class="country-badge country-fr">FR</span></div>
             <div class="market-dates">~Nov 15 &ndash; Jan 3</div>
             <div class="event-location">Paris (Tuileries Garden)</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Most iconic Paris location; rides &amp; ice rink; runs to January 3; open till midnight</div>
             <div class="event-distance">~4h &#x1F684; from KL</div>
+            <a class="event-link" href="https://www.sortiraparis.com/en/what-to-visit-in-paris/walks/articles/46357-tuileries-christmas-market" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="50.6365" data-lng="3.0635" data-month="nov" data-country="FR" data-dates="2026-11-19">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">March&eacute; de No&euml;l de Lille</div><a class="event-link" href="https://noel-a-lille.com" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+            <div class="event-header"><div class="market-name">March&eacute; de No&euml;l de Lille</div><span class="country-badge country-fr">FR</span></div>
             <div class="market-dates">~Nov 19 &ndash; Dec 30</div>
             <div class="event-location">Lille</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Flemish-French blend; great gaufres &amp; carbonnade; Ferris wheel; lively student city</div>
             <div class="event-distance">~4.5h from KL</div>
+            <a class="event-link" href="https://noel-a-lille.com" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="48.1397" data-lng="7.2636" data-month="nov" data-country="FR" data-dates="2026-11-27">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">March&eacute; de No&euml;l de Kaysersberg</div><a class="event-link" href="https://www.kaysersberg.com/en/visit/an-authentic-christmas-in-the-kaysersberg-valley-in-alsace/" target="_blank" rel="noopener">↗</a><span class="country-badge country-fr">FR</span></div>
+            <div class="event-header"><div class="market-name">March&eacute; de No&euml;l de Kaysersberg</div><span class="country-badge country-fr">FR</span></div>
             <div class="market-dates">Weekends late Nov &ndash; Dec</div>
             <div class="event-location">Kaysersberg</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Most charming small village market in Alsace; artisan focus; castle ruins; bredele &amp; vin chaud</div>
             <div class="event-distance">~2h from KL</div>
+            <a class="event-link" href="https://www.kaysersberg.com/en/visit/an-authentic-christmas-in-the-kaysersberg-valley-in-alsace/" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
     </div>
 
@@ -1478,39 +1570,43 @@
     <div class="events-grid fade-in">
         <div class="market-card" data-lat="50.8467" data-lng="4.3525" data-month="nov" data-country="BE" data-dates="2026-11-27">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Plaisirs d'Hiver / Winter Wonders</div><a class="event-link" href="https://www.brussels.be/winter-wonders" target="_blank" rel="noopener">↗</a><span class="country-badge country-be">BE</span></div>
+            <div class="event-header"><div class="market-name">Plaisirs d'Hiver / Winter Wonders</div><span class="country-badge country-be">BE</span></div>
             <div class="market-dates">~Nov 27 &ndash; Jan 3</div>
             <div class="event-location">Brussels</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Biggest in Belgium; Grand-Place light show; Belgian waffles, chocolate &amp; beer; 200+ stalls</div>
             <div class="event-distance">~3h15 from KL</div>
+            <a class="event-link" href="https://www.brussels.be/winter-wonders" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="51.2093" data-lng="3.2247" data-month="nov" data-country="BE" data-dates="2026-11-20">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Brugge Wintergloed</div><a class="event-link" href="https://www.visitbruges.be/en/winter-glow" target="_blank" rel="noopener">↗</a><span class="country-badge country-be">BE</span></div>
+            <div class="event-header"><div class="market-name">Brugge Wintergloed</div><span class="country-badge country-be">BE</span></div>
             <div class="market-dates">~Nov 20 &ndash; Jan 3</div>
             <div class="event-location">Bruges</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Most romantic setting in Belgium; medieval canals; Winter Glow light trail; Belgian chocolate</div>
             <div class="event-distance">~4h from KL</div>
+            <a class="event-link" href="https://www.visitbruges.be/en/winter-glow" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="51.0536" data-lng="3.7253" data-month="dec" data-country="BE" data-dates="2026-12-03">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Gentse Winterfeesten</div><a class="event-link" href="https://visit.gent.be/en/calendar/christmas-market" target="_blank" rel="noopener">↗</a><span class="country-badge country-be">BE</span></div>
+            <div class="event-header"><div class="market-name">Gentse Winterfeesten</div><span class="country-badge country-be">BE</span></div>
             <div class="market-dates">Dec 3 &ndash; Jan 3</div>
             <div class="event-location">Ghent</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">150+ chalets; medieval waterfront; less crowded than Bruges; excellent Belgian food &amp; beer</div>
             <div class="event-distance">~3h45 from KL</div>
+            <a class="event-link" href="https://visit.gent.be/en/calendar/christmas-market" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="50.6407" data-lng="5.5712" data-month="nov" data-country="BE" data-dates="2026-11-27">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Village de No&euml;l de Li&egrave;ge</div><a class="event-link" href="https://www.villagedenoel.be" target="_blank" rel="noopener">↗</a><span class="country-badge country-be">BE</span></div>
+            <div class="event-header"><div class="market-name">Village de No&euml;l de Li&egrave;ge</div><span class="country-badge country-be">BE</span></div>
             <div class="market-dates">Nov 27 &ndash; Dec 29</div>
             <div class="event-location">Li&egrave;ge</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">200 chalets (massive scale); authentic Li&egrave;ge waffles; boulets &agrave; la li&eacute;geoise; closest Belgian market</div>
             <div class="event-distance">~2.5h from KL</div>
+            <a class="event-link" href="https://www.villagedenoel.be" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
     </div>
 
@@ -1519,39 +1615,43 @@
     <div class="events-grid fade-in">
         <div class="market-card" data-lat="50.8488" data-lng="5.6878" data-month="nov" data-country="NL" data-dates="2026-11-28">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Magisch Maastricht</div><a class="event-link" href="https://www.visitmaastricht.com/en/doing/events/magical-maastricht" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+            <div class="event-header"><div class="market-name">Magisch Maastricht</div><span class="country-badge country-nl">NL</span></div>
             <div class="market-dates">~Nov 28 &ndash; Dec 31</div>
             <div class="event-location">Maastricht</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Andr&eacute; Rieu concerts; Ferris wheel; Burgundian food culture; 1M+ visitors; runs to Dec 31</div>
             <div class="event-distance">~2h15 from KL</div>
+            <a class="event-link" href="https://www.visitmaastricht.com/en/doing/events/magical-maastricht" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="50.8656" data-lng="5.8319" data-month="nov" data-country="NL" data-dates="2026-11-13">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Kerststad Valkenburg</div><a class="event-link" href="https://www.christmastownvalkenburg.com" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+            <div class="event-header"><div class="market-name">Kerststad Valkenburg</div><span class="country-badge country-nl">NL</span></div>
             <div class="market-dates">Nov 13 &ndash; Jan 3</div>
             <div class="event-location">Valkenburg</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Only cave Christmas market in Europe; 3 underground venues; longest season (mid-Nov to Jan)</div>
             <div class="event-distance">~2h15 from KL</div>
+            <a class="event-link" href="https://www.christmastownvalkenburg.com" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="52.3579" data-lng="4.8836" data-month="dec" data-country="NL" data-dates="2026-12-03">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Amsterdam Christmas Market</div><a class="event-link" href="https://winterfestivalamsterdam.com" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+            <div class="event-header"><div class="market-name">Amsterdam Christmas Market</div><span class="country-badge country-nl">NL</span></div>
             <div class="market-dates">~Dec 3 &ndash; Dec 28</div>
             <div class="event-location">Amsterdam (Museumplein)</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Museumplein setting; combine with Amsterdam Light Festival; gezellig (cozy) Dutch vibes</div>
             <div class="event-distance">~4.5h from KL</div>
+            <a class="event-link" href="https://winterfestivalamsterdam.com" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
         <div class="market-card" data-lat="52.0842" data-lng="4.3105" data-month="dec" data-country="NL" data-dates="2026-12-03">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Royal Christmas Fair Den Haag</div><a class="event-link" href="https://royalchristmasfair.nl/en/" target="_blank" rel="noopener">↗</a><span class="country-badge country-nl">NL</span></div>
+            <div class="event-header"><div class="market-name">Royal Christmas Fair Den Haag</div><span class="country-badge country-nl">NL</span></div>
             <div class="market-dates">Dec 3 &ndash; Dec 23</div>
             <div class="event-location">The Hague</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Most elegant/upscale market in NL; Lange Voorhout setting; free entry; high-quality crafts</div>
             <div class="event-distance">~4.5h from KL</div>
+            <a class="event-link" href="https://royalchristmasfair.nl/en/" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
     </div>
 
@@ -1560,12 +1660,13 @@
     <div class="events-grid fade-in">
         <div class="market-card" data-lat="49.6100" data-lng="6.1296" data-month="nov" data-country="LU" data-dates="2026-11-20">
             <button class="fav-star" aria-label="Favorite">&#9734;</button>
-            <div class="event-header"><div class="market-name">Winterlights Luxembourg City</div><a class="event-link" href="https://www.vdl.lu/en/visiting/leisure-and-recreation/festivals-fairs-and-events/winterlights-0" target="_blank" rel="noopener">↗</a><span class="country-badge country-lu">LU</span></div>
+            <div class="event-header"><div class="market-name">Winterlights Luxembourg City</div><span class="country-badge country-lu">LU</span></div>
             <div class="market-dates">Nov 20 &ndash; Jan 3</div>
             <div class="event-location">Luxembourg City</div>
             <div class="known-for-label">Known For</div>
             <div class="market-known-for">Multi-site across the city; Luxembourgish products; dramatic fortress/gorge setting; runs to Jan 3</div>
             <div class="event-distance">~1h45 from KL</div>
+            <a class="event-link" href="https://www.vdl.lu/en/visiting/leisure-and-recreation/festivals-fairs-and-events/winterlights-0" target="_blank" rel="noopener">Official Site ↗</a>
         </div>
     </div>
 
@@ -2131,11 +2232,18 @@ document.querySelectorAll('.fade-in').forEach(function(el) { fadeObserver.observ
     });
 
     function updateActive() {
-        var scrollPos = window.scrollY + window.innerHeight / 3;
-        var active = sections[0];
-        sections.forEach(function(s) {
-            if (s.el.offsetTop <= scrollPos) active = s;
-        });
+        var viewTop = window.scrollY + window.innerHeight * 0.35;
+        var active = null;
+        // Walk sections in reverse — first one whose top is above viewTop wins
+        for (var i = sections.length - 1; i >= 0; i--) {
+            var rect = sections[i].el.getBoundingClientRect();
+            var sectionTop = rect.top + window.scrollY;
+            if (sectionTop <= viewTop) {
+                active = sections[i];
+                break;
+            }
+        }
+        if (!active) active = sections[0];
         tabs.forEach(function(t) { t.classList.remove('active'); });
         if (active) active.tab.classList.add('active');
     }
